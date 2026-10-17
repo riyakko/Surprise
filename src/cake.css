@@ -1,0 +1,51 @@
+.ck-slice-wrap {
+  position: relative;
+  width: min(100%, 780px);
+  height: min(60vh, 560px);
+  min-height: 380px;
+  margin: 0 auto;
+}
+
+.ck-slice-wrap canvas {
+  display: block;
+}
+
+.ck-actions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.ck-actions > * {
+  pointer-events: auto;
+}
+
+.ck-cut-btn:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.ck-hint {
+  padding: 10px 22px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  background: rgba(120, 80, 190, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.ck-hint-glow {
+  animation: ck-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes ck-pulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(255, 158, 203, 0); }
+  50% { box-shadow: 0 0 24px rgba(255, 158, 203, 0.6); }
+}
